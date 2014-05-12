@@ -8,7 +8,7 @@ java 8以降じゃないと動かないかも。
 ここから落とせる
 http://xiidec.appspot.com/hamsaradkun.zip
 
-
+![hamsaradkun](http://xiidec.appspot.com/img/hamsarad.png "hamsaradkun")
 
 こういう文章を自動生成します。
 
