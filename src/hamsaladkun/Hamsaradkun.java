@@ -105,10 +105,11 @@ public class Hamsaradkun extends Application {
     }
     public static String salad(String input,int row,int col){
         String rtnStr="";
+        Map<String,List<String>> dict=Hamsaradkun.makeDict(input);
         for(int r=0;r<row;r++){
             String line1="";
             for(int i=0;i<42;i++){
-                String line2=Hamsaradkun.shuffle(Hamsaradkun.makeDict(input));
+                String line2=Hamsaradkun.shuffle(dict);
                 if(Math.abs(line1.length()-col)>Math.abs(line2.length()-col)){
                     line1=line2;
                 }
