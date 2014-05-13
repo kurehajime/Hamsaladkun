@@ -21,6 +21,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 
 /**
  *
@@ -42,7 +44,14 @@ public class FXMLDocumentController implements Initializable {
         String s =text_in.getText();
         int row =isNumber(text_row.getText())? Integer.parseInt(text_row.getText()) :3; 
         int col =isNumber(text_col.getText())? Integer.parseInt(text_col.getText()) :35; 
-        text_out.setText(Hamsaradkun.salad(s,row,col));
+        String output =Hamsaradkun.salad(s,row,col);
+        text_out.setText(output);
+        
+        //クリップボードにもコピー
+        final Clipboard clipboard = Clipboard.getSystemClipboard();
+        final ClipboardContent content = new ClipboardContent();
+        content.putString(output);
+        clipboard.setContent(content);
     }
     
     @Override
@@ -59,6 +68,7 @@ public class FXMLDocumentController implements Initializable {
             Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
         }
         text_in.setText(input);
+        
 
         
         
