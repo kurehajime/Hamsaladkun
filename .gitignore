@@ -1,2 +1,12 @@
 
 build/built-jar.properties
+
+build/classes/hamsaladkun/FXMLDocumentController.class
+
+*.class
+
+*.class
+
+build/classes/hamsaladkun/Hamsaradkun.class
+
+dist/Hamsaladkun.html

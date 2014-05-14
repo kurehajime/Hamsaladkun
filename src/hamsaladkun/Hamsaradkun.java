@@ -47,12 +47,7 @@ public class Hamsaradkun extends Application {
     public static Map<String,List<String>> makeDict(String input){
         //正規化
         List<String> lines= Arrays.asList(input
-                .replaceAll("\\.", "\n")
-                .replaceAll("。", "\n")
-                .replaceAll("[?]", "\n")
-                .replaceAll("!", "\n")
-                .replaceAll("？", "\n")
-                .replaceAll("！", "\n")
+                .replaceAll("[.?!？！。]", "\n")
                 .replaceAll("[「」【】()]", "")
                 .split("\n"));
         
@@ -118,6 +113,5 @@ public class Hamsaradkun extends Application {
         }
         return rtnStr;
     }
-    
-    
+       
 }

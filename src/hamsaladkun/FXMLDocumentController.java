@@ -69,10 +69,6 @@ public class FXMLDocumentController implements Initializable {
         }
         text_in.setText(input);
         
-
-        
-        
-        
     }
     public boolean isNumber(String val) {
         String regex = "\\A[-]?[0-9]+\\z";
